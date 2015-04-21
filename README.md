@@ -41,9 +41,13 @@ http://kroltech.com/2013/12/boilerplate-web-app-using-backbone-js-expressjs-node
 node 0.10+ (and npm), mongodb - visit nodejs.org and mongodb.com to download
 each.
 
+    $ brew install mongo
+    $ mongod --path db/
+
     $ sudo npm install -g grunt-cli
     $ npm install
     $ grunt init:dev
+
 
 Grunt init:dev only needs to be run the first time to prepare the vendor.js
 files.
