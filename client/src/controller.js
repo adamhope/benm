@@ -33,7 +33,7 @@ module.exports = Controller = Marionette.Controller.extend({
     renderView: function(view) {
         this.destroyCurrentView(view);
         App.core.vent.trigger('app:log', 'Controller: Rendering new view.');
-        $('#js-boilerplate-app').html(view.render().el);
+        $('#watch-face').html(view.render().el);
     },
 
     destroyCurrentView: function(view) {
