@@ -11,4 +11,5 @@
 - tasks to copy fonts/images etc. not sure if that's all setup
 - code coverage checks, are they an option again?
 - are html files etc being copied automatically?
+- get source maps working
 - switch from less to scss - due to directory importing issues this wold require not using bower for any modules with css/scss
