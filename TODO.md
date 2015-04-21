@@ -14,3 +14,4 @@
 - are html files etc being copied automatically?
 - get source maps working
 - switch from less to scss - due to directory importing issues this wold require not using bower for any modules with css/scss
+- border radius not working, probably to do with a sass vs less thing
