@@ -4,6 +4,7 @@
 - write tests for all the things! Can we really TDD this way?
 - change mongo task to start mongo with a local db directory
 - setup instructions
+- get JS source maps working
 
 # Adam really wants to do these but they're not as important :-(
 - Jasmine not mocha (maybe)

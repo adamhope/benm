@@ -9,12 +9,20 @@ module.exports = {
         }, {
             src: 'client/img/*',
             dest: 'public/img/'
+        }, {
+            expand: true,
+            cwd: 'client',
+            src: 'fonts/*',
+            dest: 'public/'
         }]
     },
     prod: {
         files: [{
             src: ['client/img/*'],
             dest: 'dist/img/'
+        },{
+            src: ['client/fonts/*'],
+            dest: 'dist/fonts/'
         }]
     }
 };
