@@ -1,0 +1,50 @@
+default:
+  - prompt:dev
+  - inputHandler
+
+init:dev:
+  - clean
+  - bower
+  - browserify:vendor
+
+build:dev:
+  - clean:dev
+  - browserify:app
+  - browserify:test
+  - jshint:dev
+  - less:transpile
+  - concat
+  - copy:dev
+
+build:prod:
+  - clean:prod
+  - browserify:vendor
+  - browserify:app
+  - jshint:all
+  - less:transpile
+  - concat
+  - cssmin
+  - uglify
+  - copy:prod
+
+heroku:
+  - init:dev
+  - build:dev
+
+server:
+  - build:dev
+  - concurrent:dev
+
+test:server:
+  - simplemocha:server
+
+test:client:
+  - karma:test
+
+tdd:
+  - karma:watcher:start
+  - concurrent:test
+
+test:
+  - test:server
+  - test:client
